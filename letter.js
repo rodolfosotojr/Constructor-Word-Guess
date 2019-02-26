@@ -1,5 +1,4 @@
-module.exports = Letter;
-var userGuess = process.argv[2]
+// var userGuess = process.argv[2]
 
 function Letter(char) {
     this.char = char;
@@ -7,9 +6,9 @@ function Letter(char) {
 
     this.displayChar = function () {
         if (this.guess === true) {
-            console.log(this.char);
+            return this.char;
         } else {
-            console.log("_");
+            return ("_");
         }
     }
 
@@ -19,14 +18,13 @@ function Letter(char) {
             this.guess = true;
             this.displayChar();
         } else {
-            this.guess = false;
             this.displayChar();
         }
     }
 
 };
+module.exports = Letter;
 
-var test = new Letter("");
-
-test.compareChar(userGuess);
+// var test = new Letter("k");
+// test.compareChar(userGuess);
 
