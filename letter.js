@@ -1,5 +1,6 @@
 // var userGuess = process.argv[2]
 
+//Constructor with char parameter and buleon of guess set to false
 function Letter(char) {
     this.char = char;
     this.guess = false;
